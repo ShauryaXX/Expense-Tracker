@@ -1,5 +1,6 @@
 import React from "react";
 import AddExpense from "./AddExpense.jsx";
+import "./style.css"
 
 function App() {
     return (

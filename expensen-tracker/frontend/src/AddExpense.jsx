@@ -9,7 +9,7 @@ function AddExpense() {
     e.preventDefault();
     try {
       const expenseData = { date, amount: parseFloat(amount), category, description };
-      await axios.post("http://localhost:8000/expenses/", expenseData);
+      await axios.post("http://127.0.0.1:8000/expenses/", expenseData);
       alert("Expense added successfully!");
       // Reset form fields
       setDate("");
