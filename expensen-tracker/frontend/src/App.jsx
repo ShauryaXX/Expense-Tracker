@@ -1,5 +1,6 @@
 import React from "react";
 import AddExpense from "./AddExpense.jsx";
+import ExpenseHistory from "./ExpenseHistory.jsx";
 import "./style.css"
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         </header>
         <main>
           <AddExpense />
+          <ExpenseHistory />
         </main>
       </div>
     );

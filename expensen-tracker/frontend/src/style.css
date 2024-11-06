@@ -1,6 +1,5 @@
-/* App.css */
 
-body {
+  body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
@@ -17,6 +16,7 @@ body {
     color: white;
   }
   
+  /* AddExpense Form Styles */
   form {
     background: white;
     padding: 20px;
@@ -52,5 +52,26 @@ body {
   
   button:hover {
     background-color: #21a1f1;
+  }
+  
+  /* ExpenseHistory Table Styles */
+  .expense-history {
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
   }
   
