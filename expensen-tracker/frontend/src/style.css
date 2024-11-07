@@ -1,77 +1,106 @@
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #e4ddf3;
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .App {
-    text-align: center;
-  }
-  
-  .App-header {
-    background-color: #282c34;
-    padding: 20px;
-    color: white;
-  }
-  
-  /* AddExpense Form Styles */
-  form {
-    background: white;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  input[type="date"],
-  input[type="number"],
-  input[type="text"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    background-color: #61dafb;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #21a1f1;
-  }
-  
-  /* ExpenseHistory Table Styles */
-  .expense-history {
-    margin: 20px;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f4f4f4;
-  }
-  
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #493183;
+  padding: 20px;
+  color: white;
+}
+
+/* AddExpense Form Styles */
+form {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="date"],
+input[type="number"],
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #8f61fb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8f61fb;
+}
+
+/* ExpenseHistory Table Styles */
+.expense-history {
+  margin: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.card th, .card td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.card th {
+  background-color: #8f61fb;
+  color: white;
+}
+
+.card tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.card tr:hover {
+  background-color: #f1f1f1;
+}
+
+.card td {
+  color: #333;
+}
+
+.card td.amount {
+  color: #ff5722;
+  font-weight: bold;
+}
