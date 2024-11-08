@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, List
 from datetime import datetime
@@ -6,6 +7,15 @@ from pymongo import MongoClient
 from bson.objectid import ObjectId
 
 app = FastAPI()
+
+# CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Adjust this to your frontend's URL in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # MongoDB Atlas connection
 MONGO_URL = "mongodb+srv://Expense_user:Expenseuser24@expensecluster.l3gzb.mongodb.net/"
