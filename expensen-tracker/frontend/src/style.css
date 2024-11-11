@@ -104,3 +104,47 @@ button:hover {
   color: #ff5722;
   font-weight: bold;
 }
+.expense-history {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-section label {
+  margin-right: 10px;
+}
+
+.filter-section input {
+  margin-right: 10px;
+}
+
+.add-expense-button {
+  margin-bottom: 20px;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expense-table th, .expense-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.expense-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
