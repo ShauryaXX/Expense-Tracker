@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { sumExpensesForDate } from "./sumExpenses";
 import axios from "axios";
 import { useNavigate } from "react-router-dom"; // Assuming you're using react-router for navigation
-import DeleteExpense from "./DeleteExpense"; // Import the DeleteExpense component
 import './style.css'; // Import the CSS file
 
 function ExpenseHistory() {
@@ -27,7 +26,7 @@ function ExpenseHistory() {
     if (endDate) params.end_date = endDate;
 
     try {
-      const response = await axios.get("http://localhost:8000/expenses/", { params });
+      const response = await axios.get("http://127.0.0.1:8000/expenses/", { params });
       setExpenses(response.data);
     } catch (error) {
       console.error("Error fetching expenses:", error);
@@ -78,6 +77,7 @@ function ExpenseHistory() {
         <table className="expense-table">
           <thead>
             <tr>
+              <th>Record ID</th>
               <th>Date</th>
               <th>Amount</th>
               <th>Category</th>
@@ -87,6 +87,7 @@ function ExpenseHistory() {
           <tbody>
             {expenses.map((expense) => (
               <tr key={expense.id}>
+                <td>{expense.record_id}</td>
                 <td>{new Date(expense.date).toLocaleDateString()}</td>
                 <td>${expense.amount}</td>
                 <td>{expense.category}</td>

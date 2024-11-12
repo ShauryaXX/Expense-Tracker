@@ -61,7 +61,7 @@ button:hover {
 .card {
   background: white;
   padding: 20px;
-  margin: 20px auto;
+  margin-top: 10rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 800px;
@@ -141,6 +141,11 @@ button:hover {
 
 .delete-expense-button {
   margin-bottom: 20px;
+}
+
+.expense-history-button {
+  margin-top: 20px;
+  margin-left: auto;
 }
 
 .expense-table {

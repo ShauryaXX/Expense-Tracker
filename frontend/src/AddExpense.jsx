@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import './style.css'; // Import the CSS file
 
 function AddExpense() {
@@ -9,17 +10,20 @@ function AddExpense() {
   const [description, setDescription] = useState("");
   const [message, setMessage] = useState("");
 
+  const navigate = useNavigate();
+
   // Function to add an expense
   const handleAddExpense = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/expenses/", {
+      const response = await axios.post("http://127.0.0.1:8000/expenses/", {
         date,
         amount,
         category,
         description
       });
-      if (response.data.success) {
+      console.log(response);
+      if (response.status === 200) {
         setMessage("Expense added successfully.");
         // Clear the form
         setDate("");
@@ -30,13 +34,14 @@ function AddExpense() {
         setMessage("Failed to add expense.");
       }
     } catch (error) {
-      console.error("Error adding expense:", error);
+      
       setMessage("Error adding expense.");
     }
   };
 
   return (
     <div className="add-expense">
+      
       <form onSubmit={handleAddExpense} className="card">
         <h3 className="card-title">Add Expense</h3>
         <label>
@@ -55,7 +60,10 @@ function AddExpense() {
           Description:
           <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
         </label>
-        <button type="submit">Add Expense</button>
+        <button type="submit">Add Expense</button><br/>
+        <button onClick={() => navigate("/expense-history")} className="expense-history-button">
+            Expense History
+          </button>
         {message && <p>{message}</p>}
       </form>
     </div>
