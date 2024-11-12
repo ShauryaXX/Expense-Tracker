@@ -15,7 +15,7 @@ body {
   color: white;
 }
 
-/* AddExpense Form Styles */
+/* Form Styles for AddExpense and DeleteExpense */
 form {
   background: white;
   padding: 20px;
@@ -104,6 +104,7 @@ button:hover {
   color: #ff5722;
   font-weight: bold;
 }
+
 .expense-history {
   padding: 20px;
 }
@@ -113,6 +114,11 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
 }
 
 .filter-section {
@@ -133,6 +139,10 @@ button:hover {
   margin-bottom: 20px;
 }
 
+.delete-expense-button {
+  margin-bottom: 20px;
+}
+
 .expense-table {
   width: 100%;
   border-collapse: collapse;
@@ -147,4 +157,3 @@ button:hover {
   background-color: #f2f2f2;
   text-align: left;
 }
-
